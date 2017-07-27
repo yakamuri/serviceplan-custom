@@ -1,0 +1,48 @@
+/* Sass color variables */
+$blue: #0089cd;
+$white: #ffffff;
+
+/* Make the body 100% of the browser viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+h1 {
+  padding: 20% 0 0 0;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+}
+p {
+  text-align: center;
+  color: transparentize($white, 0.5);
+}
+strong {
+  color: #fff;
+}
+
+/* Make each section 100% of the browser viewport height */
+section {
+  height: 100%;
+  color: white;
+  position: relative;
+  text-align: center;
+
+  /* Center the content of the sections */
+  .inner {
+    margin: 0 auto;
+    max-width: 85%;
+  }
+}
+
+/* Background colors for each section */
+section#one { background-color: $blue; }
+section#two { background-color: darken($blue, 10%); }
+section#three { background-color: lighten($blue, 5%); }
+section#four {
+  background-color:  darken($blue, 10%);
+  transition: all 0.4s linear;
+  &.is-active {
+    background-color: #222222;
+  }
+}
