@@ -33,8 +33,8 @@ module.exports = function(grunt) {
             custom: {
                 files: {
                     'js/app.min.js': [
-                        'js/toMinify/_main_first.js',
-                        'js/toMinify/_main_second.js'
+                        'js/toMinify/_scroll_magic_init.js',
+                        'js/toMinify/_main.js'
                     ]
                 }
             },

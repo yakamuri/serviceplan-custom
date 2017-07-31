@@ -6,32 +6,26 @@ include("_header.php"); ?>
 
     <div id="block-wrapper">
 
-    <?php include '_partials/_block_one.php'; ?>
+    <div class="logo">
+        <img src="../assets/images/serviceplanlogo.jpg" alt="">
+    </div>
 
-    <section id="one">
-        <div class=“inner”>
-            <h1>ScrollMagic Tutorial</h1>
-            <p>Learn how to <strong>pin elements</strong>.</p>
-        </div>
-    </section>
-    <section id="two">
-        <div class=“inner”>
-            <h1>ScrollMagic Tutorial</h1>
-            <p>Learn how to create a <strong>ScrollMagic scene</strong>.</p>
-        </div>
-    </section>
-    <section id="three">
-        <div class=“inner”>
-            <h1>ScrollMagic Tutorial</h1>
-            <p>Learn how to customize debug <strong>indicators</strong>.</p>
-        </div>
-    </section>
-    <section id="four">
-        <div class=“inner”>
-            <h1>ScrollMagic Tutorial</h1>
-            <p>Learn how to toggle classes using <strong>setClassToggle</strong>.</p>
-        </div>
-    </section>
+    <div class="dot-navigation">
+        <ul>
+            <li><a href="#block1" id="high1" class="active"></a></li>
+            <li><a href="#block2" id="high2"></a></li>
+            <li><a href="#block3" id="high3"></a></li>
+            <li><a href="#block4" id="high4"></a></li>
+        </ul>
+    </div>
+
+        <?php include '_partials/_block_one.php'; ?>
+
+        <?php include '_partials/_block_two.php'; ?>
+
+        <?php include '_partials/_block_three.php'; ?>
+
+        <?php include '_partials/_block_four.php'; ?>
 
     </div>
 

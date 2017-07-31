@@ -2722,8 +2722,8 @@ a {
 	display: block;
 	content: ' ';
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	background: rgba(255, 255, 255, 0.5);
@@ -2748,321 +2748,324 @@ a {
 	visibility: visible;
 }
 
-/* line 1, ../sass/_setup/_skrollr.scss */
+/**************Loader before all images are loaded**************/
 
-#page-content {
-	width: 100%;
-	height: 100%;
+/* line 3, ../sass/_block/_block_one.scss */
+
+.no-js #loader {
+	display: none;
 }
 
-/* line 5, ../sass/_setup/_skrollr.scss */
+/* line 4, ../sass/_block/_block_one.scss */
 
-#slides-container {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+.js #loader {
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 0;
 }
 
-/* line 10, ../sass/_setup/_skrollr.scss */
+/* line 5, ../sass/_block/_block_one.scss */
 
-#slides-container #slides {
-	width: 100%;
-	height: 200%;
+.se-pre-con {
 	position: fixed;
 	left: 0;
 	top: 0;
-	background-color: #5bc0de;
-}
-
-/* line 18, ../sass/_setup/_skrollr.scss */
-
-#slides-container .slide {
-	position: absolute;
-	left: 0;
-	top: 0;
 	width: 100%;
-	height: 50%;
+	height: 100%;
+	z-index: 9999;
+	background: url("../images/loader-64x/Preloader_2.gif") center no-repeat #fff;
 }
 
-/* line 26, ../sass/_setup/_skrollr.scss */
+/**********************************************************/
 
-#slides-container #slides-1 {
-	background-image: url("../images/Cortal_Consors_Selfie.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+/* line 18, ../sass/_block/_block_one.scss */
+
+#block-wrapper {
+	width: 100%;
+	height: 100%;
 }
 
-/* line 32, ../sass/_setup/_skrollr.scss */
+/* line 23, ../sass/_block/_block_one.scss */
 
-#slides-container #slides-2 {
-	background-image: url("../images/Lufthansa-Passangers_on_Tour-Teaser.jpg");
+h1 {
+	margin: 0;
+	text-align: center;
+}
+
+/* line 27, ../sass/_block/_block_one.scss */
+
+p {
+	text-align: center;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 32, ../sass/_block/_block_one.scss */
+
+.logo {
+	position: absolute;
+	width: 300px;
+	height: 60px;
+	top: 60px;
+	right: 60px;
+	z-index: 2;
+}
+
+/* line 41, ../sass/_block/_block_one.scss */
+
+.dot-navigation {
+	position: fixed;
+	right: 30px;
+	top: 50%;
+	z-index: 1000;
+	margin-top: -53px;
+	overflow: visible;
+}
+
+/* line 49, ../sass/_block/_block_one.scss */
+
+.dot-navigation ul {
+	padding: 0;
+	overflow: visible;
+}
+
+/* line 53, ../sass/_block/_block_one.scss */
+
+.dot-navigation ul li {
+	width: 20px;
+	height: 20px;
+	overflow: visible;
+	margin-bottom: 10px;
+	list-style-type: none;
+}
+
+/* line 60, ../sass/_block/_block_one.scss */
+
+.dot-navigation ul li a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: #da0f15;
+	overflow: visible;
+	background-position: top left;
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
+	position: relative;
+}
+
+/* line 70, ../sass/_block/_block_one.scss */
+
+.dot-navigation ul li a:hover {
+	background-color: #ffffff;
+}
+
+/* line 74, ../sass/_block/_block_one.scss */
+
+.dot-navigation ul li a.active {
+	background-color: #ffffff;
+	-moz-transition-property: all;
+	-o-transition-property: all;
+	-webkit-transition-property: all;
+	transition-property: all;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-moz-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
+/* line 85, ../sass/_block/_block_one.scss */
+
+.btn-more {
+	background-color: #da0f15;
+	background-image: url("../images/btn_more.png");
+	background-repeat: no-repeat;
+	background-size: 28px 28px;
+	background-position: center;
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	left: 60px;
+	bottom: 15%;
+	cursor: pointer;
+}
+
+/* line 98, ../sass/_block/_block_one.scss */
+
+.btn-more:hover {
+	background-color: #7d0b0e;
+}
+
+/* line 102, ../sass/_block/_block_one.scss */
+
+.btn-minus {
+	background-color: #da0f15;
+	background-image: url("../images/btn_minus.png");
+	background-repeat: no-repeat;
+	background-size: 28px 6px;
+	background-position: center;
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	left: 60px;
+	bottom: 15%;
+	cursor: pointer;
+}
+
+/* line 115, ../sass/_block/_block_one.scss */
+
+.btn-minus:hover {
+	background-color: #7d0b0e;
+}
+
+/* line 120, ../sass/_block/_block_one.scss */
+
+.bottom-arrow {
+	position: absolute;
+	bottom: 0;
+	background-color: #da0f15;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 2em;
+	text-align: center;
+	padding: 1em 0;
+	width: 100%;
+	font-family: Arial,sans-serif;
+	font-weight: normal;
+	font-weight: bold;
+	z-index: 15;
+	max-height: 100px;
+}
+
+/* line 135, ../sass/_block/_block_one.scss */
+
+.bottom-arrow:before {
+	border-bottom: 30px solid #da0f15;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	bottom: 100%;
+	content: "";
+	position: absolute;
+	z-index: 20;
+	-moz-transform: translate(-50%, 0px);
+	-ms-transform: translate(-50%, 0px);
+	-webkit-transform: translate(-50%, 0px);
+	transform: translate(-50%, 0px);
+	left: 50%;
+}
+
+/* line 146, ../sass/_block/_block_one.scss */
+
+.bottom-arrow h1 {
+	color: #ffffff;
+}
+
+/* line 153, ../sass/_block/_block_one.scss */
+
+.bottom-arrow.toTop:before {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-moz-transition-property: opacity;
+	-o-transition-property: opacity;
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-moz-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
+/* line 160, ../sass/_block/_block_one.scss */
+
+.bottom-arrow.toTop:after {
+	border-top: 30px solid #da0f15;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	bottom: -30%;
+	content: "";
+	position: absolute;
+	z-index: 20;
+	-moz-transform: translate(-50%, 0px);
+	-ms-transform: translate(-50%, 0px);
+	-webkit-transform: translate(-50%, 0px);
+	transform: translate(-50%, 0px);
+	left: 50%;
+}
+
+/* line 174, ../sass/_block/_block_one.scss */
+
+.block-info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #ffffff;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	color: #333333;
+}
+
+/* line 184, ../sass/_block/_block_one.scss */
+
+.block-info .inner {
+	padding: 25% 5% 10%;
+}
+
+/* line 188, ../sass/_block/_block_one.scss */
+
+.block-info.anim {
 	-moz-transform: translate(0, 100%);
 	-ms-transform: translate(0, 100%);
 	-webkit-transform: translate(0, 100%);
 	transform: translate(0, 100%);
-}
-
-/* line 39, ../sass/_setup/_skrollr.scss */
-
-#slides-container #slides-3 {
-	background-image: url("../images/Samova-flowering-teabag_teaser.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	-moz-transform: translate(0, 200%);
-	-ms-transform: translate(0, 200%);
-	-webkit-transform: translate(0, 200%);
-	transform: translate(0, 200%);
-}
-
-/* line 46, ../sass/_setup/_skrollr.scss */
-
-#slides-container #slides-4 {
-	background-image: url("../images/icebersongs-header.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	-moz-transform: translate(0, 300%);
-	-ms-transform: translate(0, 300%);
-	-webkit-transform: translate(0, 300%);
-	transform: translate(0, 300%);
-}
-
-/* line 53, ../sass/_setup/_skrollr.scss */
-
-#slides-container .caption {
-	position: absolute;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-	text-align: center;
-	background-color: #da0f15;
-	padding: 1em 0;
-}
-
-/* line 62, ../sass/_setup/_skrollr.scss */
-
-#slides-container .caption h1 {
-	text-transform: uppercase;
-	font-family: Arial,sans-serif;
-	font-weight: normal;
-	color: #ffffff;
-}
-
-/* line 69, ../sass/_setup/_skrollr.scss */
-
-#helper {
-	position: absolute;
-	height: 600%;
-	width: 20px;
-	left: 0;
-	top: 0;
-}
-
-/* line 76, ../sass/_setup/_skrollr.scss */
-
-.marker {
-	height: 25%;
-	width: 100%;
-}
-
-/* line 80, ../sass/_setup/_skrollr.scss */
-
-.red {
-	background-color: red;
-}
-
-/* line 83, ../sass/_setup/_skrollr.scss */
-
-.green {
-	background-color: green;
-}
-
-/* line 86, ../sass/_setup/_skrollr.scss */
-
-.blue {
-	background-color: blue;
-}
-
-/* line 89, ../sass/_setup/_skrollr.scss */
-
-.yellow {
-	background-color: yellow;
-}
-
-/* line 1, ../sass/_block/_block_two.scss */
-
-body {
-	font: 16px/1.5 'Open Sans', Helvetica, Helvetica Neue, Arial, sans-serif;
-	color: rgba(0, 0, 0, 0.9);
-}
-
-/* line 6, ../sass/_block/_block_two.scss */
-
-html,
-body {
-	height: 100%;
-	margin: 0;
-}
-
-/* line 11, ../sass/_block/_block_two.scss */
-
-h1 {
-	padding: 20% 0 0 0;
-	margin: 0;
-	text-align: center;
-	font-size: 36px;
-	color: rgba(0, 0, 0, 0.9);
+	visibility: visible;
+	-moz-transition-property: all;
+	-o-transition-property: all;
+	-webkit-transition-property: all;
+	transition-property: all;
+	-moz-transition-timing-function: ease-in-out;
+	-o-transition-timing-function: ease-in-out;
+	-webkit-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+	-moz-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
 	position: relative;
+	max-height: 95%;
+	height: auto;
+	overflow-y: scroll;
 }
 
-/* line 19, ../sass/_block/_block_two.scss */
-
-h1:before {
-	content: '&#9829';
-	display: block;
-	position: absolute;
-	bottom: 50px;
-	left: 50%;
-	text-align: center;
-	width: 100px;
-	margin-left: -50px;
-	color: #ff466a;
-	font-size: 30px;
-}
-
-/* line 32, ../sass/_block/_block_two.scss */
-
-p {
-	text-align: center;
-	color: rgba(0, 0, 0, 0.5);
-}
-
-/* line 37, ../sass/_block/_block_two.scss */
-
-strong {
-	color: rgba(0, 0, 0, 0.9);
-}
-
-/* line 40, ../sass/_block/_block_two.scss */
+/* line 211, ../sass/_block/_block_one.scss */
 
 section {
 	height: 100%;
+	width: 100%;
+	color: white;
 	position: relative;
 	text-align: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 1;
 }
 
-/* Center aligned first section */
+/* line 225, ../sass/_block/_block_one.scss */
 
-/* line 47, ../sass/_block/_block_two.scss */
-
-section .inner {
-	margin: 0 auto;
-	max-width: 85%;
+section#four {
+	transition: all 0.4s linear;
 }
 
-/* Content of the following sections aligned next to the iphone */
+/* line 227, ../sass/_block/_block_one.scss */
 
-/* line 53, ../sass/_block/_block_two.scss */
-
-section .innerText {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-100px, -50%);
-	text-align: left;
-}
-
-/* iPhone/Card positioned to the left - this is a default position */
-
-/* line 62, ../sass/_block/_block_two.scss */
-
-.iphone {
-	width: 290px;
-	height: 600px;
-	border-radius: 10px;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-150%, -50%);
-	background-color: #3757D0;
-	background-image: -webkit-radial-gradient(#81bcff, #5d7fce);
-	background-image: radial-gradient(#81bcff, #5d7fce);
-}
-
-/* Centered content of the ScrollMagic card */
-
-/* line 76, ../sass/_block/_block_two.scss */
-
-.iphone p {
-	font-size: 140px;
-	margin: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: rgba(255, 255, 255, 0.9);
-}
-
-/* Letters hidden by default */
-
-/* line 87, ../sass/_block/_block_two.scss */
-
-.iphone p.screenA,
-.iphone p.screenB,
-.iphone p.screenC {
-	opacity: 0;
-	visibility: hidden;
-}
-
-/* ScrollMagic hat on top of letters */
-
-/* line 93, ../sass/_block/_block_two.scss */
-
-.iphone p.screenHat {
-	z-index: 2;
-}
-
-/* line 96, ../sass/_block/_block_two.scss */
-
-.iphone p.screenHat img {
-	max-width: 130px;
-}
-
-/* Bullet list */
-
-/* line 101, ../sass/_block/_block_two.scss */
-
-.features {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	color: rgba(0, 0, 0, 0.6);
-}
-
-/* line 107, ../sass/_block/_block_two.scss */
-
-.features li {
-	position: relative;
-	padding-left: 17px;
-}
-
-/* A heart instead of a bullet */
-
-/* line 113, ../sass/_block/_block_two.scss */
-
-.features li:before {
-	content: '&#9829';
-	font-size: 11px;
-	position: absolute;
-	left: 0;
-	top: 5px;
-	display: block;
-	color: #ff466a;
+section#four.is-active {
+	background-color: #222222;
 }
 
 @media (min-width: 768px) {

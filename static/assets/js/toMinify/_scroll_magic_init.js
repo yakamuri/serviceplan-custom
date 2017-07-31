@@ -1,48 +1,41 @@
 var scrollmagic = (function(){
 
-    function init(){
+    function init() {
         // Init ScrollMagic
         var ctrl = new ScrollMagic.Controller({
             globalSceneOptions: {
-                triggerHook: 'onLeave'
+                triggerHook: "onLeave",
+                duration: $(window).outerHeight(true)
             }
         });
 
         // Create scene
-        $("section").each(function() {
+        $("section").each(function () {
 
             var name = $(this).attr('id');
+            var number = $(this).attr('id').slice(-1);
 
             new ScrollMagic.Scene({
                 triggerElement: this
             })
-                .setPin(this)
+                .setPin(this, {pushFollowers: false})
+                .setClassToggle('#high' + number, 'active')
                 .addIndicators({
                     colorStart: "rgba(255,255,255,0.5)",
                     colorEnd: "rgba(255,255,255,0.5)",
-                    colorTrigger : "rgba(255,255,255,1)",
-                    name:name
+                    colorTrigger: "rgba(255,255,255,1)",
+                    name: name
                 })
-                .loglevel(3)
                 .addTo(ctrl);
-
         });
-
-        // get window height
-        var wh = window.innerHeight;
-
-        new ScrollMagic.Scene({
-            offset: wh*3
-        })
-            .setClassToggle("section#four", "is-active")
-            .addTo(ctrl);
-
     }
 
     return {
         init: init
     }
+
 })();
+
 $(document).ready(function(){
    scrollmagic.init();
 });
