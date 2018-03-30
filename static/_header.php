@@ -3,6 +3,9 @@
 <!--[if IE 9]><html class="no-js ie9"><![endif]-->
 <!--[if gt IE 9]><!--><html class="no-js"><!--<![endif]-->
 <head>
+
+<!--<meta http-equiv="Content-Type" content="application/json" charset="UTF-8">-->
+
 <meta charset="UTF-8">
 <meta name="format-detection" content="telephone=no">
 <title>Scroll Magic from Scratch</title>

@@ -2,31 +2,28 @@
 
 // TEMPLATE GENERIC
 
-include("_header.php"); ?>
+    include("_header.php");
+    header('Access-Control-Allow-Origin: *');
 
-    <div id="block-wrapper">
+?>
 
-    <div class="logo">
-        <img src="../assets/images/serviceplanlogo.jpg" alt="">
-    </div>
+        <div id="block-wrapper">
 
-    <div class="dot-navigation">
-        <ul>
-            <li><a href="#block1" id="high1" class="active"></a></li>
-            <li><a href="#block2" id="high2"></a></li>
-            <li><a href="#block3" id="high3"></a></li>
-            <li><a href="#block4" id="high4"></a></li>
-        </ul>
-    </div>
+            <div class="logo">
+                <img src="../assets/images/serviceplanlogo.jpg" alt="">
+            </div>
 
-        <?php include '_partials/_block_one.php'; ?>
+            <div class="dot-navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="#p1" id="high1"></a></li>
+                    <li><a href="#p2" id="high2"></a></li>
+                    <li><a href="#p3" id="high3"></a></li>
+                    <li><a href="#p4" id="high4"></a></li>
+                </ul>
+            </div>
 
-        <?php include '_partials/_block_two.php'; ?>
+            <?php include '_partials/_block_test.php'; ?>
 
-        <?php include '_partials/_block_three.php'; ?>
-
-        <?php include '_partials/_block_four.php'; ?>
-
-    </div>
+        </div>
 
 <?php include("_footer.php"); ?>

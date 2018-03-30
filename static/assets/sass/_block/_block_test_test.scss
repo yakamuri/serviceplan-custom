@@ -1,0 +1,74 @@
+/* Anything with the parallax-parent class acts as the "mask" for the parallax
+   their children are automagically scaled and repositioned*/
+.parallax-parent {
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+/* Mobile devices typically only report scrolling events AFTER they finish, which  can lead to jittery scrolling. By wrapping the page in a container with overflow: scroll set, and setting that container in the ScrollMagic Controller, events are updated on the fly.
+
+Note that this page uses huge images, and mobile optimizations will still cause jitter because of that. with simple backgrounds it'll work as intended. probably.*/
+
+#scroll-container {
+  overflow: scroll;
+  /* hide the scrollbars by making the child slightly bigger...*/
+  height: 105vh;
+  width: 105vw;
+}
+
+.scroll-parent {
+  /* ...and the parent hide overflows */
+  height: 100vh;
+  overflow: hidden;
+}
+
+#container {
+  font-size: 24px;
+  color: gray;
+}
+
+.spacer {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  min-height: 1px;
+  //padding: 50px;
+  background-color: #0f0f5f;
+}
+
+.text {
+  position: relative;
+  top: -115%;
+  text-align: center;
+  font-size: 30px;
+  color: $colorWhite;
+  width: 100%;
+  background-color: $colorRed;
+  padding: 15px;
+  overflow: hidden;
+}
+
+
+.bg {
+  background-size: cover;
+  background-position: center center;
+  height: 200vh;
+  position: relative;
+  top: -100%;
+
+  img {
+    //width: auto;
+    //height: 100%;
+  }
+}
+
+@media (max-width: $for_mobile){
+  .bg {
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}

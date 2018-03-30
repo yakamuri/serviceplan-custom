@@ -18,12 +18,25 @@
 #block-wrapper {
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+
+.parallaxParent {
+  //height: 100vh;
+  //overflow: hidden;
+}
+
+.inside {
+  //height: 200%;
+  //position: relative;
+  //top: -100%;
 }
 
 h1 {
   margin: 0;
   text-align: center;
 }
+
 p {
   text-align: center;
   color: transparentize($colorWhite, 0.5);
@@ -78,6 +91,10 @@ p {
           @include transition-timing-function(ease);
         }
       }
+      //&.active {
+      //  background-color: $colorWhite;
+      //
+      //}
     }
   }
 }
@@ -94,6 +111,7 @@ p {
   left: 60px;
   bottom: 15%;
   cursor: pointer;
+  //z-index: 3;
 
   &:hover {
     background-color: $colorRedDark;
@@ -117,20 +135,19 @@ p {
   }
 }
 
-.bottom-arrow {
+.arrow {
   position: absolute;
   bottom: 0;
+  top: auto;
   background-color: $colorRed;
   color: $colorWhite;
   text-transform: uppercase;
   font-size: 2em;
   text-align: center;
-  padding: 1em 0;
   width: 100%;
   @include fontNormal();
   font-weight: bold;
   z-index: 15;
-  max-height: 100px;
 
   &:before {
     border-bottom: 30px solid $colorRed;
@@ -148,7 +165,11 @@ p {
   }
 
   &.toTop {
-    //@include transform(translate(0, -90%));
+    top: 0;
+    bottom: auto;
+    @include transition-property(top);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease-out);
 
     &:before {
       @include opacity(0);
@@ -182,49 +203,38 @@ p {
   color: $colorBrand;
 
   .inner {
-    padding: 25% 5% 10%;
+    padding: 10% 5% 10%;
   }
 
   &.anim {
-    @include translate(0, 100%);
     visibility: visible;
     @include transition-property(all);
     @include transition-timing-function(ease-in-out);
-    @include transition-duration(.2s);
-    position: relative;
-    max-height: 95%;
-    height: auto;
-    overflow-y: scroll;
-  }
-
-  &.section-one {
-  }
-  &.section-two {
-  }
-  &.section-three {
-  }
-  &.section-four {
+    @include transition-duration(.5s);
+    //z-index: 4;
   }
 
 }
 
 section {
-  height: 100%;
   width: 100%;
-  color: white;
+  height: 100%;
   position: relative;
+  //position: absolute;
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
-}
 
-section#one {}
-section#two {}
-section#three {}
-section#four {
-  transition: all 0.4s linear;
-  &.is-active {
-    background-color: #222222;
+  .bg {
+
+    &.closed {
+      @include transform(translate(0, -200%));
+      @include transition-property(all);
+      @include transition-duration(1s);
+      @include transition-timing-function(ease);
+      display: none;
+    }
   }
+
 }

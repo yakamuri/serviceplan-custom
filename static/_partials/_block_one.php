@@ -1,6 +1,7 @@
-<section id="block1"
-         data-image-src-big="assets/images/BMW_DiscoveryTour_Header.jpg"
+<section id="parallax1" class="parallaxParent">
+    <div class="inside" data-image-src-big="assets/images/BMW_DiscoveryTour_Header.jpg"
          data-image-src-small="assets/images/BMW_DiscoveryTour_Header-small.jpg">
+    </div>
 
     <div class="btn-more"></div>
 
